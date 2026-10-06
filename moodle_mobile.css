@@ -1,69 +1,43 @@
 /* ==========================================================================
-   MOODLE MOBILE - TEMA PERSONALIZADO UNIMETRO
+   ESTILOS INSTITUCIONALES PARA MOODLE APP (UNIMETRO)
    ========================================================================== */
 
-/* 1. Variables globales de la app (Paleta Institucional) */
-:root {
-    --core-color: #0072b9;
-    --core-primary: #0072b9;
-    --core-primary-hover: #004370;
-    --core-header-toolbar-background: #0072b9;
-    --ion-color-primary: #0072b9;
-    --ion-color-primary-rgb: 0, 114, 185;
-    --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-shade: #004370;
-    --ion-color-primary-tint: #009ddc;
-}
-
-/* 2. Enlaces */
-a, 
-.core-course-module-handler a {
-    color: #004370 !important;
-}
-
-/* 3. Normalización de textos y etiquetas verdes a azul institucional */
-[style*="color:#125A17" i], [style*="color: #125A17" i],
-[style*="color:#125a17" i], [style*="color: #125a17" i],
-[style*="color: rgb(18, 90, 23)" i], [style*="color: RGB(18,90,23)" i],
-[style*="color: rgb(0, 102, 51)" i], [style*="color:rgb(0, 102, 51)" i],
-[style*="color: rgb(0,102,51)" i], [style*="color:rgb(0,102,51)" i],
-[style*="color:#006633" i], [style*="color: #006633" i] {
-    color: #004370 !important;
-}
-
-/* 4. Barras y banners de etiquetas en cursos */
-table td[style*="background-color: #3b708e"],
-table td[style*="background-color:#3b708e"],
-table td[style*="background-color: #006633"],
-table td[style*="background-color:#006633"],
-table td[style*="background-color: #1D7323"],
-table td[style*="background-color:#1D7323"],
-div.modtype_label td[style*="background-color: #3b708e"],
-div.modtype_label td[style*="background-color: #006633"],
-div.modtype_label td[style*="background-color: #1D7323"],
-div[style*="background-color: #006633"],
-div[style*="background-color:#006633"] {
+/* 1. Transformación de barras temáticas (Verdes a Azul Institucional) */
+[style*="background-color: #006633"],
+[style*="background-color:#006633"],
+[style*="background-color: #1D7323"],
+[style*="background-color:#1D7323"],
+[style*="background-color: #3b708e"],
+[style*="background-color:#3b708e"],
+[style*="background:#006633"],
+[style*="background: #006633"],
+[style*="background:#1D7323"],
+[style*="background: #1D7323"] {
     background: linear-gradient(90deg, #0072b9 0%, #009ddc 100%) !important;
-    border-radius: 6px !important;
-    color: #ffffff !important;
-}
-
-/* 5. Cajas Atto personalizadas */
-.attostylesbox.attostylesbox-solid-green,
-.attostylesbox.attostylesbox-solid-blue {
     background-color: #0072b9 !important;
     color: #ffffff !important;
-}
-.attostylesbox.attostylesbox-outline-green,
-.attostylesbox.attostylesbox-outline-blue {
-    border-color: #0072b9 !important;
-    color: #004370 !important;
+    border-radius: 6px !important;
 }
 
-/* 6. Botones en la app móvil */
-ion-button,
-.button-solid {
+/* Forzar que el texto y los iconos dentro de las barras sean blancos */
+[style*="background-color: #006633"] *,
+[style*="background-color:#006633"] *,
+[style*="background-color: #1D7323"] *,
+[style*="background-color:#1D7323"] * {
+    color: #ffffff !important;
+}
+
+/* 2. Botones de navegación inferior en los cursos (cambiar naranja por azul) */
+ion-button.button-solid,
+.course-navigation ion-button,
+[class*="course-navigation"] button {
     --background: #0072b9 !important;
     --background-activated: #004370 !important;
     --color: #ffffff !important;
+}
+
+/* 3. Pestañas activas superiores */
+ion-segment-button.ion-selected {
+    --indicator-color: #0072b9 !important;
+    --color-checked: #0072b9 !important;
 }
